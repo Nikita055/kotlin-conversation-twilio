@@ -67,7 +67,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
         useIR = true
         freeCompilerArgs += [
                 "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
@@ -179,6 +179,7 @@ dependencies {
     // Dependency on a local library module
     implementation(project(":myLibrary"))
     implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    implementation 'com.github.Nikita055:kotlin-conversation-twilio:1.0.1'
 
 }
 
